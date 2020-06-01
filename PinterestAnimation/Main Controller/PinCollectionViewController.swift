@@ -10,15 +10,10 @@ import UIKit
 
 private let reuseIdentifier = "CustomCollectionViewCell"
 
-let screenBounds = UIScreen.main.bounds
-let screenSize   = screenBounds.size
-let screenWidth  = screenSize.width
-let screenHeight = screenSize.height
-let gridWidth : CGFloat = (screenSize.width/2)-5.0
-
 class PinCollectionViewController: UICollectionViewController {
 
     var imageNameList : [String] = []
+    let delegateHolder = NavigationControllerDelegate()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +29,8 @@ class PinCollectionViewController: UICollectionViewController {
             imageNameList.append(imageName)
             index += 1
         }
+        
+        self.navigationController!.delegate = delegateHolder
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -51,6 +48,15 @@ class PinCollectionViewController: UICollectionViewController {
         collectionCell.setNeedsLayout()
         return collectionCell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        let pageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
+        pageViewController.indexPath = indexPath
+        pageViewController.imageNameList = imageNameList
+        collectionView.setToIndexPath(indexPath)
+        navigationController!.pushViewController(pageViewController, animated: true)
+    }
+
 }
 
 extension PinCollectionViewController: CHTCollectionViewDelegateWaterfallLayout{
@@ -60,4 +66,34 @@ extension PinCollectionViewController: CHTCollectionViewDelegateWaterfallLayout{
         return CGSize(width: gridWidth, height: imageHeight)
     }
 
+}
+
+
+extension PinCollectionViewController: NTTransitionProtocol{
+    //Animate the collectionView
+    func transitionCollectionView() -> UICollectionView! {
+        collectionView
+    }
+}
+
+extension PinCollectionViewController: NTWaterFallViewControllerProtocol{
+    //Animate the current VC to collection
+    func viewWillAppearWithPageIndex(_ pageIndex: NSInteger) {
+        var position: UICollectionView.ScrollPosition =
+            UICollectionView.ScrollPosition.centeredHorizontally.intersection(.centeredVertically)
+        let image: UIImage! = UIImage(named: self.imageNameList[pageIndex] as String)
+        let imageHeight = image.size.height*gridWidth/image.size.width
+        if imageHeight > 400 {//whatever you like, it's the max value for height of image
+           position = .top
+        }
+        let currentIndexPath = IndexPath(row: pageIndex, section: 0)
+        collectionView.setToIndexPath(currentIndexPath)
+        
+        if pageIndex < 2{
+            collectionView.setContentOffset(CGPoint.zero, animated: false)
+        }
+        else{
+            collectionView.scrollToItem(at: currentIndexPath, at: position, animated: false)
+        }
+    }
 }

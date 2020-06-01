@@ -22,3 +22,13 @@ class CustomCollectionViewCell: UICollectionViewCell {
         pinImageView.image = UIImage(named: imageName!)
     }
 }
+
+extension CustomCollectionViewCell: NTTansitionWaterfallGridViewProtocol{
+    func snapShotForTransition() -> UIView! {
+        let snapShotView = UIImageView(image: self.pinImageView.image)
+        snapShotView.frame = pinImageView.frame
+        return snapShotView
+    }
+    
+    
+}

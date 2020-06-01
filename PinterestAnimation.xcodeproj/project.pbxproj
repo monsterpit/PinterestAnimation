@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89037BED248529AF000437AD /* NTHorizontalPageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89037BEC248529AF000437AD /* NTHorizontalPageViewCell.swift */; };
+		89037BEF248532DC000437AD /* NTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89037BEE248532DC000437AD /* NTNavigationController.swift */; };
 		89F528792484F09800CB66B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528782484F09800CB66B9 /* AppDelegate.swift */; };
 		89F5287B2484F09800CB66B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5287A2484F09800CB66B9 /* SceneDelegate.swift */; };
 		89F528802484F09800CB66B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F5287E2484F09800CB66B9 /* Main.storyboard */; };
@@ -31,9 +33,14 @@
 		89F528B32484FAD500CB66B9 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F528B12484FAD500CB66B9 /* CustomCollectionViewCell.xib */; };
 		89F528B52484FF4F00CB66B9 /* PinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528B42484FF4F00CB66B9 /* PinCollectionViewController.swift */; };
 		89F528BA248504F400CB66B9 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528B9248504F400CB66B9 /* CollectionViewController.swift */; };
+		89F528BD24851CCD00CB66B9 /* NTTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528BC24851CCD00CB66B9 /* NTTransition.swift */; };
+		89F528BF24851CF200CB66B9 /* NTTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528BE24851CF200CB66B9 /* NTTransitionProtocol.swift */; };
+		89F528C224851D8A00CB66B9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528C124851D8A00CB66B9 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89037BEC248529AF000437AD /* NTHorizontalPageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTHorizontalPageViewCell.swift; sourceTree = "<group>"; };
+		89037BEE248532DC000437AD /* NTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTNavigationController.swift; sourceTree = "<group>"; };
 		89F528752484F09800CB66B9 /* PinterestAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinterestAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F528782484F09800CB66B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F5287A2484F09800CB66B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +67,9 @@
 		89F528B12484FAD500CB66B9 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		89F528B42484FF4F00CB66B9 /* PinCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCollectionViewController.swift; sourceTree = "<group>"; };
 		89F528B9248504F400CB66B9 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		89F528BC24851CCD00CB66B9 /* NTTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTTransition.swift; sourceTree = "<group>"; };
+		89F528BE24851CF200CB66B9 /* NTTransitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTTransitionProtocol.swift; sourceTree = "<group>"; };
+		89F528C124851D8A00CB66B9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89037BEB248529A2000437AD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				89037BEC248529AF000437AD /* NTHorizontalPageViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		89F5286C2484F09800CB66B9 = {
 			isa = PBXGroup;
 			children = (
@@ -92,11 +110,13 @@
 		89F528772484F09800CB66B9 /* PinterestAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				89F528C024851D6D00CB66B9 /* Extension */,
+				89F528BB24851CB600CB66B9 /* Transition */,
 				89F528B8248504DB00CB66B9 /* ScrollingView */,
 				89F528B62485038E00CB66B9 /* Staggered  Layout */,
 				89F528B7248503C500CB66B9 /* Main Controller */,
-				89F528782484F09800CB66B9 /* AppDelegate.swift */,
 				89F5287A2484F09800CB66B9 /* SceneDelegate.swift */,
+				89F528782484F09800CB66B9 /* AppDelegate.swift */,
 				89F5288E2484F18C00CB66B9 /* images */,
 				89F5287E2484F09800CB66B9 /* Main.storyboard */,
 				89F528812484F09C00CB66B9 /* Assets.xcassets */,
@@ -156,9 +176,28 @@
 		89F528B8248504DB00CB66B9 /* ScrollingView */ = {
 			isa = PBXGroup;
 			children = (
+				89037BEB248529A2000437AD /* Cell */,
 				89F528B9248504F400CB66B9 /* CollectionViewController.swift */,
 			);
 			path = ScrollingView;
+			sourceTree = "<group>";
+		};
+		89F528BB24851CB600CB66B9 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				89F528BC24851CCD00CB66B9 /* NTTransition.swift */,
+				89F528BE24851CF200CB66B9 /* NTTransitionProtocol.swift */,
+				89037BEE248532DC000437AD /* NTNavigationController.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		89F528C024851D6D00CB66B9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				89F528C124851D8A00CB66B9 /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,12 +286,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F528C224851D8A00CB66B9 /* Extension.swift in Sources */,
 				89F528BA248504F400CB66B9 /* CollectionViewController.swift in Sources */,
+				89037BEF248532DC000437AD /* NTNavigationController.swift in Sources */,
 				89F528B22484FAD500CB66B9 /* CustomCollectionViewCell.swift in Sources */,
+				89F528BD24851CCD00CB66B9 /* NTTransition.swift in Sources */,
 				89F528792484F09800CB66B9 /* AppDelegate.swift in Sources */,
+				89F528BF24851CF200CB66B9 /* NTTransitionProtocol.swift in Sources */,
 				89F5287B2484F09800CB66B9 /* SceneDelegate.swift in Sources */,
 				89F5288D2484F13300CB66B9 /* CHTCollectionViewWaterfallLayout.swift in Sources */,
 				89F528B52484FF4F00CB66B9 /* PinCollectionViewController.swift in Sources */,
+				89037BED248529AF000437AD /* NTHorizontalPageViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

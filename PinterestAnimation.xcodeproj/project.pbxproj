@@ -30,6 +30,7 @@
 		89F528B22484FAD500CB66B9 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528B02484FAD500CB66B9 /* CustomCollectionViewCell.swift */; };
 		89F528B32484FAD500CB66B9 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89F528B12484FAD500CB66B9 /* CustomCollectionViewCell.xib */; };
 		89F528B52484FF4F00CB66B9 /* PinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528B42484FF4F00CB66B9 /* PinCollectionViewController.swift */; };
+		89F528BA248504F400CB66B9 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F528B9248504F400CB66B9 /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		89F528B02484FAD500CB66B9 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		89F528B12484FAD500CB66B9 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		89F528B42484FF4F00CB66B9 /* PinCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCollectionViewController.swift; sourceTree = "<group>"; };
+		89F528B9248504F400CB66B9 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		89F528772484F09800CB66B9 /* PinterestAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				89F528B8248504DB00CB66B9 /* ScrollingView */,
 				89F528B62485038E00CB66B9 /* Staggered  Layout */,
 				89F528B7248503C500CB66B9 /* Main Controller */,
 				89F528782484F09800CB66B9 /* AppDelegate.swift */,
@@ -148,6 +151,14 @@
 				89F528AB2484F27500CB66B9 /* CollectionCell */,
 			);
 			path = "Main Controller";
+			sourceTree = "<group>";
+		};
+		89F528B8248504DB00CB66B9 /* ScrollingView */ = {
+			isa = PBXGroup;
+			children = (
+				89F528B9248504F400CB66B9 /* CollectionViewController.swift */,
+			);
+			path = ScrollingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F528BA248504F400CB66B9 /* CollectionViewController.swift in Sources */,
 				89F528B22484FAD500CB66B9 /* CustomCollectionViewCell.swift in Sources */,
 				89F528792484F09800CB66B9 /* AppDelegate.swift in Sources */,
 				89F5287B2484F09800CB66B9 /* SceneDelegate.swift in Sources */,
